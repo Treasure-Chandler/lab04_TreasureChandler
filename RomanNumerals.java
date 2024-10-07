@@ -78,8 +78,8 @@ public class RomanNumerals {
             // problem XI:
             // checks if the decimal returned 0, meaning the input was invalid
             if (decimal == 0) {
-                JOptionPane.showMessageDialog(dialog, "Your input " + roman +
-                                              " is not a valid roman numeral" +
+                JOptionPane.showMessageDialog(dialog, "Your input \"" + roman +
+                                              "\" is not a valid roman numeral" +
                                               " to input!",
                                               title,
                                               JOptionPane.ERROR_MESSAGE);
