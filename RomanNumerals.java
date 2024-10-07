@@ -5,6 +5,7 @@
  * 
  */
 
+// problem XVII:
 import javax.swing.JDialog;     // needed for the JOptionPane class
 import javax.swing.JOptionPane; // needed for the JOptionPane class
 
@@ -30,6 +31,7 @@ public class RomanNumerals {
         final JDialog dialog = new JDialog();
         dialog.setAlwaysOnTop(true);
 
+        // problem XV:
         /*
          * asks whether the process to input any more roman
          * numerals should be continued
@@ -73,6 +75,7 @@ public class RomanNumerals {
             // converts the roman numeral value to an actual number value
             decimal = converter(roman);
 
+            // problem XI:
             // checks if the decimal returned 0, meaning the input was invalid
             if (decimal == 0) {
                 JOptionPane.showMessageDialog(dialog, "Your input " + roman +
@@ -88,7 +91,9 @@ public class RomanNumerals {
             // problem IX:
             JOptionPane.showMessageDialog(dialog, String.format("The decimal value" +
                                                                 " for the roman numeral " +
-                                                                "\"%s\" is %d", roman, decimal),
+                                                                "\"%s\" is " +
+                                                                "\n....... %d .......",
+                                                                roman, decimal),
                                           title,
                                           JOptionPane.INFORMATION_MESSAGE);
 
@@ -100,8 +105,11 @@ public class RomanNumerals {
 
         } while (yesNo == JOptionPane.YES_OPTION);
 
+        // problem XVI:
         JOptionPane.showMessageDialog(dialog, "End of program!", title,
                                       JOptionPane.INFORMATION_MESSAGE);
+
+        // problem XVII:
         // needed for the JOptionPane class
         System.exit(0);
 
@@ -114,7 +122,7 @@ public class RomanNumerals {
      * @return          returns the converted roman numeral as a number
      */
     public static int converter(String roman) {
-        // problem VII:
+        // problem VII, XII, XIII:
         int decimal = 0;
         /*
          * using if-else statements, the statement
